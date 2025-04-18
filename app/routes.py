@@ -8,3 +8,7 @@ router = APIRouter()
 def ask_question(request: QuestionRequest):
     answer = get_quran_answer(request.question)
     return AnswerResponse(answer=answer)
+
+@router.get("/health")
+def ask_question_get():
+    return "OK"
